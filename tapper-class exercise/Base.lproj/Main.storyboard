@@ -35,7 +35,7 @@
                                     <constraint firstAttribute="width" constant="166" id="Ycj-qt-qFv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7PM-Zh-BfV" userLabel="playButton">
                                 <rect key="frame" x="217" y="335" width="166" height="76"/>
@@ -91,7 +91,6 @@
                     <connections>
                         <outlet property="playButtonLabel" destination="7PM-Zh-BfV" id="ie4-HF-cGJ"/>
                         <outlet property="tapButtonLabel" destination="g7A-Fc-m9B" id="H7L-vn-SDU"/>
-                        <outlet property="tapButtonPressed" destination="g7A-Fc-m9B" id="F2o-e8-j9E"/>
                         <outlet property="tapCounter" destination="YxS-wa-jjl" id="1dk-BN-jd7"/>
                         <outlet property="tapper" destination="CtB-R9-Tka" id="Ctc-be-cOd"/>
                         <outlet property="tapsToWin" destination="avT-oA-3TB" id="yu4-cD-Lah"/>

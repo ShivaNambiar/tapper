@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var currentTaps = 0
+    var maxTaps = 0
+    
     
     @IBOutlet weak var tapper: UIImageView!
     @IBOutlet weak var tapCounter: UILabel!
@@ -28,7 +31,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func playButtonPressed(sender: AnyObject) {
+    @IBAction func playButtonPressed(sender: UIButton) {
         
         if tapsToWin.text != nil
         {
@@ -38,13 +41,34 @@ class ViewController: UIViewController {
             
             tapButtonLabel.hidden = false
             tapCounter.hidden = false
+            
+            tapCounter.text = "\(currentTaps) Taps"
+            maxTaps = Int(tapsToWin.text!)!
+            currentTaps = 0
         }
         
         
     }
     
     
-    @IBAction func tapButtonPressed(sender: AnyObject) {
+    @IBAction func tapButtonPressed(sender: UIButton!) {
+      
+        if currentTaps >= maxTaps
+        {
+            tapper.hidden = false
+            tapsToWin.hidden  = false
+            playButtonLabel.hidden = false
+            
+            tapButtonLabel.hidden = true
+            tapCounter.hidden = true
+            
+        }else
+        {
+            currentTaps++
+            tapCounter.text = "\(currentTaps) Taps"
+            
+        }
+        
     }
     
     
